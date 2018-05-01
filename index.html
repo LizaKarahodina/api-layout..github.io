@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Semalt</title>
+	<link rel="stylesheet" href="css/main.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>
+			API
+		</h1>
+
+		<nav class="menu-api" id="#navbar">
+			<a href="#introduction" class="menu-api__item " id="link-introduction">Introduction</a>
+			<a href="#documentation" class="menu-api__item" id="link-documentation">API Documentation/ Guide</a>
+			<a href="#started" class="menu-api__item" id="link-started">Getting Started</a>
+			<a href="#prices" class="menu-api__item" id="link-prices">Prices and Plans</a>
+			<a href="#faqs" class="menu-api__item" id="link-faqs">FAQ</a>
+		</nav>
+
+		<div class="container2">
+			<div class="title-block" id="introduction">
+				<div class="title-block__title">
+					Introduction 
+				</div>
+				<div class="title-block__text">
+					The Semalt API allows to interact directly with the SEMALT platform, increasing the efficiency of managing large amount or complex campaigns. 
+					With the SEMALT API you can build software that manages campaigns from the customer level down to the keyword level. The API can do almost everything the SEMALT UI does, but programmatically.
+				</div>
+			</div>
+			<h2>Full access to our huge database </h2>
+			<p>It gives developers the ability to build tools and applications that interact directly with Semalt’s huge keyword database of 3.5 billion search terms (350 million unique keywords).</p>
+			<p>The Semalt API offers 2 services: SERP and Keyword Suggestions. It can be used to either get the search engine results pages google data for the provided keywords or generate keyword suggestions.</p>
+			<h2>Search engine results pages google  </h2>
+			<p>SERP service allows getting sites or key words positions in Google for the keywords that you request. Provided key words or sites can be localized to N individual locations, N languages and "Google" search network. </p>
+			<h2>Types of companies that have benefited from the SEMALT API include:</h2>
+			<ul>
+			 <li>ERP / Keywords data API</li>
+			 <li>Site positions API</li>
+			 <li>Competitor Analysis API</li>
+			</ul>
+			<h2>Some typical use cases include: </h2>
+			<ul>
+			 <li>Custom reporting</li>
+			 <li>Custom reporting</li>
+			 <li>Custom reporting</li>
+			</ul>
+			
+			<h2>SEMALT API REPORTS: </h2>
+			<ul>
+			 <li>Marketing/ advertising agencies</li>
+			 <li>Search Engine Marketing (SEM) companies</li>
+			 <li>Big brands managing a large number of accounts, with needs beyond what's possible within the  UI.</li>
+			</ul>
+			
+			<div class="title-block" id="documentation">
+				<div class="title-block__title">
+					API Documentation/ Guide  
+				</div>
+				<div class="title-block__text">
+					Our API is RESTful… basically that means its super simple to use but we have wrappers for your language just in case
+				</div>
+			</div>
+			<div class="btn-select-table-wrap">
+				<button class="btn-select-table  btn-select-table--active">
+				SERP / Keywords data API 
+				</button>
+				<button class="btn-select-table">
+				Site positions API
+				</button>
+				<button class="btn-select-table">
+				Competitor Analysis API
+				</button>
+			</div>
+			
+			<h2>
+				Parameters 
+			</h2>
+			<div class="link">
+				<a href="http://api-v2.semalt.com/kw?kw=semalt&date=2018-04-23&se=1&limi">http://api-v2.semalt.com/kw?kw=semalt&date=2018-04-23&se=1&limi</a>
+				
+			</div>
+			<table id="" class="table-parameters">
+				<tr>
+					<th colspan="2">
+						Parameter
+					</th>
+					<th>
+						Required?
+					</th>
+					<th>
+						Description
+					</th>
+					<th>
+						Default
+					</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>kw</td>
+					<td>Yes</td>
+					<td>String	<br>	 Keyword on which you want to get statistics</td>
+					<td>n/d</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>date</td>
+					<td>No</td>
+					<td>String<br>
+						Dates for which you want to get the statistics<br>
+						Example:<br>
+						- date=2018-04-22,2018-04-23,2018-04-24<br>
+						- date=2018-04-22_2018-04-24</td>
+					<td>Current day</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>se</td>
+					<td>No</td>
+					<td>Integer <br>Search engine  </td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>pretty</td>
+					<td>No</td>
+					<td>Integer<br> Set pretty=1 to get JSON in beauty format</td>
+					<td>n/d</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>limit</td>
+					<td>No</td>
+					<td>Integer<br> Number of results you want to get   </td>
+					<td>n/d</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>offset</td>
+					<td>No</td>
+					<td>Integer <br>The order number of the result from which you want to get results</td>
+					<td>n/d</td>
+				</tr>
+				<tr>
+					<th colspan="5">
+						In result
+					</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>se</td>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>date</td>
+					<td colspan="3">Date for which statistics are taken in date ascending order    </td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>resultsCnt</td>
+					<td colspan="3">ITotal count of results</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>resultsCnt</td>
+					<td colspan="3">List of results </td>
+				</tr>
+			</table>
+			<p>To help you get started, we offer client libraries in Java, Node, Python, PHP, and Rub Semalt API can be used to either get the search volume data for the provided SERP or generate keyword suggestions. Hence, the API offers 3 services that are called SERP / Keywords data API, Site positions API, Competitor Analysis API</p>
+			
+			<div class="tabs-request">
+				<button class="tabs-request__item">Simple</button>
+				<button class="tabs-request__item">cURL</button>
+				<button class="tabs-request__item">PHP</button>
+				<button class="tabs-request__item">Python</button>
+				<button class="tabs-request__item">Node</button>
+				<button class="tabs-request__item  tabs-request__item--modify">Java</button>
+				
+
+			</div>
+			<h2>Request example</h2>
+
+			<div class="link">
+				<a href="http://api-v2.semalt.com/kw?kw=semalt&date=2018-04-25&se=196&limit=5&pos_start=0&pretty=1 ">http://api-v2.semalt.com/kw?kw=semalt&date=2018-04-25&se=196&limit=5&pos_start=0&pretty=1 </a>
+			</div>
+			<h2>Response example</h2>
+			<div class="response-block" id="code">
+				<code>
+					{<Br>
+				    "queryTime": 0.3733057975769,<Br>
+				    "kw": "semalt",<Br>
+				    "se": "1",<Br>
+				    "limit": 10,<Br>
+				    "offset": 5,<Br>
+				    "date": "2018-04-23",<Br>
+				    "resultsCnt": 1,<Br>
+				    "results": [<Br>
+				        {<Br>
+				            "pos": 6,<Br>
+				            "site": "wordpress.org",<Br>
+				            "page": "wordpress.org/plugins/<Br>semalt/",<Br>
+				            "https": 1,<Br>
+				            "www": 0<Br>
+				        },<Br>
+				        {<Br>
+				            "pos": 7,<Br>
+				            "site": "tenrec.com",<Br>
+				            "page": "tenrec.com/2014/05/14/<Br>what-the-heck-is-a-semalt/",<Br>
+				            "https": 1,<Br>
+				            "www": 0<Br>
+				</code>
+			</div>
+			<div class="title-block title-block--small" id="started">
+				<div class="title-block__title">
+					Getting Started
+				</div>
+			</div>
+			<div class="start">
+				<div class="start__img">
+					<img src="src/start.jpg" alt="start">
+				</div>
+				<div class="start__text">
+					<h4>Getting Started</h4>
+					Ready to start integrating with SEMALT API?<br>
+					You can be up and running in just a few short steps.
+				</div>
+			</div>
+			<div class="start-options">
+				<div class="start-options__item">Upgrade to a Business subscription plan.</div>
+				<div class="start-options__item">Purchase an API package that suits your needs.</div>
+				<div class="start-options__item">Get your API key</div>
+			</div>
+			<div class="title-block title-block--small" id="prices">
+				<div class="title-block__title">
+					Prices and Plans
+				</div>
+			</div>
+			<div class="price">
+				<div class="price__choose">
+					<div class="price__choose-item price__choose-item--active">
+						Mounsly Subscribtion
+					</div>
+					<div class="price__choose-item">
+						Annual Subscribtion (save up to 20%)
+					</div>
+				</div>
+				<table class="subscribe">
+					<tr>
+						<th>Features</th>
+						<th>Plan mint</th>
+						<th>Plan average</th>
+						<th>Plan maxt</th>
+						<th>PLAN customt</th>
+					</tr>
+					<tr>
+						<td>Keywords, q-ty/month</td>
+						<td>—</td>
+						<td>—</td>
+						<td>400 000</td>
+						<td>Custom</td>
+					</tr>
+					<tr>
+						<td>Reports per day</td>
+						<td>—</td>
+						<td>—</td>
+						<td>500</td>
+						<td>Custom</td>
+					</tr>
+					<tr>
+						<td>Results per report</td>
+						<td>—</td>
+						<td>—</td>
+						<td>unlimited</td>
+						<td>Custom</td>
+					</tr>
+					<tr>
+						<td>Keyword Lookup</td>
+						<td>Keyword Lookup</td>
+						<td>Keyword Lookup</td>
+						<td>Keyword Lookup</td>
+						<td>Keyword Lookup</td>
+					</tr>
+					<tr>
+						<td>Related Keywords (suggestions)</td>
+						<td>Related Keywords</td>
+						<td>Related Keywords</td>
+						<td>Related Keywords</td>
+						<td>Custom</td>
+					</tr>
+					<tr>
+						<td>Historical data</td>
+						<td>N</td>
+						<td>?</td>
+						<td>Y</td>
+						<td>Custom</td>
+					</tr>
+					<tr>
+						<td>SE, q-ty</td>
+						<td>—</td>
+						<td>—</td>
+						<td>all=360</td>
+						<td>640,000</td>
+					</tr>
+					<tr>
+						<td>SE, q-ty</td>
+						<td>—</td>
+						<td>—</td>
+						<td>all=360</td>
+						<td>640,000</td>
+					</tr>
+					<tr>
+						<td>Prices, $ / mon</td>
+						<td>—</td>
+						<td>—</td>
+						<td>$ 4000</td>
+						<td>Custom</td>
+					</tr>
+					<tr>
+						<td>Price per additional user, $ / mon</td>
+						<td>—</td>
+						<td>—</td>
+						<td>$ 100</td>
+						<td>Custom</td>
+					</tr>
+					<tr>
+						<td>Choose</td>
+						<td><button class="btn-subscribe">Subscribe</button></td>
+						<td><button class="btn-subscribe">Subscribe</button></td>
+						<td><button class="btn-subscribe">Subscribe</button></td>
+						<td><button class="btn-subscribe">Subscribe</button></td>
+					</tr>	
+				</table>
+			</div>
+			
+
+			<div class="prPartnerWr">
+		        <div class="prPartnerWrTitle">Payment Details</div>
+		        <div class="prPartnerWrLogo"><img src="src/fastspring.png"></div>
+		        <div class="prPayments">
+		            <img class="visa" src="src/visa.png" alt="">
+		            <img class="master-card" src="src/master-card.png" alt="">
+		            <img class="american-express" src="src/american-express.png" alt="">
+		            <img class="discover" src="src/discover.png" alt="">
+		            <img class="jcb" src="jcb.png" alt="">
+		            <img class="paypal" src="src/paypal.png" alt="">
+		            <img class="amazon" src="src/amazon.png" alt="">
+		        </div>
+		        <div class="prPartnerText"  data-ll="1102">You can get more useful information about FastSpring following the links <a href="http://www.fastspring.com/purchasing-through-fastspring.php" target="_blank">Purchasing through FastSpring</a> and <a href="http://www.fastspring.com/privacy.php" target="_blank">FastSpring Privacy Policy</a>.</div>
+		        <div class="prWireBit">
+		        	<div class="prPaymentsAlso">Semalt also accepts Wire Transfer and BitCoin payments</div>
+		            <div class="imgs">
+		                <img src="src/price-bitcoin.png" alt="" class="bitcoin">
+		                <img src="src/price-swift.png" alt="" class="swift">
+		            </div>
+		        </div>
+			</div>
+
+
+
+
+			<div class="title-block title-block--small" id="faqs">
+				<div class="title-block__title">
+					FAQ
+				</div>
+			</div>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas tortor vel dictum facilisis. Sed pretium condimentum arcu, ut malesuada felis. Donec in rutrum nunc. Donec euismod augue ac molestie interdum. Maecenas gravida tincidunt risus, a lacinia nulla luctus ac. Donec rutrum tellus ipsum, et egestas erat bibendum faucibus. Etiam rhoncus tristique venenatis. Aliquam auctor consectetur velit, eget bibendum massa congue nec. Fusce non eleifend nibh, sit amet consequat odio. Vivamus eu nulla sed ipsum viverra faucibus. Curabitur ornare neque vel dignissim rutrum. Pellentesque ipsum sapien, vestibulum eget accumsan eget, euismod eu metus. Vivamus facilisis mi augue, ut auctor est convallis ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sed volutpat nisl, in bibendum felis. Nunc convallis accumsan felis id lacinia.	
+			</p>
+		</div>
+
+	</div>
+
+<script>
+    //отслеживаем событие прокрутки страницы
+    $(window).scroll(function () {
+    	let $linkIntro  =  $('#link-introduction');
+    	let $linkDoc  =  $('#link-documentation');
+    	let $linkPrice  =  $('#link-prices');
+    	let $linkFaqs  =  $('#link-faqs');
+    	let $linkStarted =  $('#link-started');
+
+        if ($(window).scrollTop() <= $('#introduction').offset().top) {
+        	
+            $linkIntro.addClass('menu-api__item--active');
+            $linkDoc.removeClass('menu-api__item--active');
+            $linkStarted.removeClass('menu-api__item--active');
+            $linkPrice.removeClass('menu-api__item--active');
+             $linkFaqs.removeClass('menu-api__item--active');
+            
+        } else if ($(window).scrollTop() > $('#introduction').offset().top) {
+            
+            $linkIntro.removeClass('menu-api__item--active');
+            if ($(window).scrollTop() <= $('#documentation').offset().top) {
+	            $linkDoc.addClass('menu-api__item--active');
+	            $linkStarted.removeClass('menu-api__item--active');
+	            $linkPrice.removeClass('menu-api__item--active');
+             	$linkFaqs.removeClass('menu-api__item--active');
+	            
+	        } else if ($(window).scrollTop() > $('#documentation').offset().top) {
+	            $linkDoc.removeClass('menu-api__item--active');
+
+	            if ($(window).scrollTop() <= $('#started').offset().top) {
+		            $linkStarted.addClass('menu-api__item--active');
+		            $linkPrice.removeClass('menu-api__item--active');
+             		$linkFaqs.removeClass('menu-api__item--active');
+		        } else if ($(window).scrollTop() > $('#started').offset().top) {
+		             $linkStarted.removeClass('menu-api__item--active');
+		             if ($(window).scrollTop() <= $('#prices').offset().top) {
+			            $linkPrice.addClass('menu-api__item--active');
+			            $linkFaqs.removeClass('menu-api__item--active');
+			        } else if ($(window).scrollTop() > $('#prices').offset().top) {
+			            $linkPrice.removeClass('menu-api__item--active');
+			            $linkFaqs.addClass('menu-api__item--active');
+			         }   
+		         } 
+	             
+         	} 
+
+        }
+
+         
+
+
+       
+
+
+         /*if ($(window).scrollTop() <= $('#faqs').offset().top) {
+        	
+             $linkFaqs.addClass('menu-api__item--active');
+            
+        } else if ($(window).scrollTop() > $('#faqs').offset().top) {
+            
+             $linkFaqs.removeClass('menu-api__item--active');
+         } */
+    });
+    
+</script>
+<!-- 
+			<a href="#documentation" class="menu-api__item" id="link-documentation">API Documentation/ Guide</a>
+			<a href="#prices" class="menu-api__item" id="link-prices">Prices and Plans</a>
+			<a href="#faqs" class="menu-api__item" id="link-faqs">FAQ</a> -->
+</body>
+</html>
